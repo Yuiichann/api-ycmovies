@@ -16,7 +16,7 @@ const crwalData = (key, callback) => {
           const name = $(el).find("a").find("h3").text();
           const origin_name = $(el).find("a").find("h4").text();
 
-          data.push({ slug, name, origin_name });
+          data.push({ slug: slug.split("/")[2], name, origin_name });
         });
 
         callback(data);
